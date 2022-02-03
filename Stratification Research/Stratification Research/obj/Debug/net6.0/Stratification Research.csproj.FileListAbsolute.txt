@@ -1,0 +1,15 @@
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\bin\Debug\net6.0\Stratification Research.exe
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\bin\Debug\net6.0\Stratification Research.deps.json
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\bin\Debug\net6.0\Stratification Research.runtimeconfig.json
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\bin\Debug\net6.0\Stratification Research.dll
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\bin\Debug\net6.0\ref\Stratification Research.dll
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\bin\Debug\net6.0\Stratification Research.pdb
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\obj\Debug\net6.0\Stratification Research.csproj.AssemblyReference.cache
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\obj\Debug\net6.0\Stratification Research.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\obj\Debug\net6.0\Stratification Research.AssemblyInfoInputs.cache
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\obj\Debug\net6.0\Stratification Research.AssemblyInfo.cs
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\obj\Debug\net6.0\Stratification Research.csproj.CoreCompileInputs.cache
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\obj\Debug\net6.0\Stratification Research.dll
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\obj\Debug\net6.0\ref\Stratification Research.dll
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\obj\Debug\net6.0\Stratification Research.pdb
+C:\Users\Bradley Pirie\OneDrive\Documents\School\Syracuse\Projects\Stratification Research\Stratification Research\obj\Debug\net6.0\Stratification Research.genruntimeconfig.cache
