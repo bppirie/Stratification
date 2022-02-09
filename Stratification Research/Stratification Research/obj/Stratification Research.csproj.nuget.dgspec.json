@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bradley Pirie\\OneDrive\\Documents\\School\\Syracuse\\Projects\\Stratification Research\\Stratification Research\\Stratification Research.csproj": {}
+    "C:\\Users\\Bradley Pirie\\Documents\\GitHub\\Stratification\\Stratification Research\\Stratification Research\\Stratification Research.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bradley Pirie\\OneDrive\\Documents\\School\\Syracuse\\Projects\\Stratification Research\\Stratification Research\\Stratification Research.csproj": {
+    "C:\\Users\\Bradley Pirie\\Documents\\GitHub\\Stratification\\Stratification Research\\Stratification Research\\Stratification Research.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bradley Pirie\\OneDrive\\Documents\\School\\Syracuse\\Projects\\Stratification Research\\Stratification Research\\Stratification Research.csproj",
+        "projectUniqueName": "C:\\Users\\Bradley Pirie\\Documents\\GitHub\\Stratification\\Stratification Research\\Stratification Research\\Stratification Research.csproj",
         "projectName": "Stratification Research",
-        "projectPath": "C:\\Users\\Bradley Pirie\\OneDrive\\Documents\\School\\Syracuse\\Projects\\Stratification Research\\Stratification Research\\Stratification Research.csproj",
+        "projectPath": "C:\\Users\\Bradley Pirie\\Documents\\GitHub\\Stratification\\Stratification Research\\Stratification Research\\Stratification Research.csproj",
         "packagesPath": "C:\\Users\\Bradley Pirie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bradley Pirie\\OneDrive\\Documents\\School\\Syracuse\\Projects\\Stratification Research\\Stratification Research\\obj\\",
+        "outputPath": "C:\\Users\\Bradley Pirie\\Documents\\GitHub\\Stratification\\Stratification Research\\Stratification Research\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

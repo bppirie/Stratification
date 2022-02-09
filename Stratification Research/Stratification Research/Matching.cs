@@ -31,65 +31,73 @@ namespace Stratification_Research
         
         public static void MatchPreferences(MatchingResearcher[] researchers)
         {
-            if (researchers != null && researchers.Length > 0)
+            if (researchers == null || researchers.Length <= 0) return;
+
+            foreach (MatchingResearcher r in researchers)
             {
-                foreach (MatchingResearcher r in researchers)
-                {
-                    r.BuildPreferences();
-                }
+                r.BuildPreferences();
+            }
 
-                int index = 0;
+            int index = 0;
 
-                while (!VerifyInitialMatching(researchers))
+            while (!VerifyInitialMatching(researchers))
+            {
+                MatchingResearcher r = researchers[index];
+                if (r.preferences != null && r.preferences.Count > 0)
                 {
-                    MatchingResearcher r = researchers[index];
-                    if (r.preferences != null)
+                    MatchingResearcher fav = r.preferences[0];
+                    int favIndex = 0;
+                    for (int i = 0; i < researchers.Length; i++)
                     {
-                        MatchingResearcher fav = r.preferences[0];
-                        int favIndex = 0;
-                        for (int i = 0; i < researchers.Length; i++)
+                        if (researchers[i].skillScore == fav.skillScore)
                         {
-                            if (researchers[i].skillScore == fav.skillScore)
-                            {
-                                fav = researchers[i];
-                                favIndex = i;
-                                break;
-                            }
+                            fav = researchers[i];
+                            favIndex = i;
+                            break;
                         }
-                        
-                        if (r.ProposeTo(fav))
-                        {
-                            fav.hold = r;
-                            MatchingResearcher[] deletes = fav.RejectLowerScores();
+                    }
 
-                            if (deletes != null && deletes.Length > 0)
+                    if (r.skillScore == 4 && fav.skillScore == 3)
+                    {
+                        Console.WriteLine("Here");
+                    }
+                    if (r.ProposeTo(fav))
+                    {
+                        fav.hold = r;
+                        MatchingResearcher[] deletes = fav.RejectLowerScores();
+
+                        if (deletes != null && deletes.Length > 0)
+                        {
+                            for (int i = 0; i < deletes.Length; i++)
                             {
-                                for (int i = 0; i < deletes.Length; i++)
+                                for (int j = 0; j < researchers.Length; j++)
                                 {
-                                    for (int j = 0; j < researchers.Length; j++)
+                                    if (deletes[i].skillScore == researchers[j].skillScore)
                                     {
-                                        if (deletes[i].skillScore == researchers[j].skillScore)
-                                        {
-                                            researchers[j].Remove(fav);
-                                            break;
-                                        }
+                                        researchers[j].Remove(fav);
+                                        break;
                                     }
                                 }
                             }
-
-                            researchers[favIndex] = fav;
                         }
 
-                        researchers[index] = r;
+                        researchers[favIndex] = fav;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Reject");
+                        r.Remove(fav);
                     }
 
-                    index = (index == researchers.Length - 1 ? 0 : index + 1);
+                    researchers[index] = r;
                 }
 
-                if (IsMaximumStable(researchers))
-                {
-                    return;
-                }
+                index = (index == researchers.Length - 1 ? 0 : index + 1);
+            }
+
+            if (IsMaximumStable(researchers))
+            {
+                return;
             }
         }
 

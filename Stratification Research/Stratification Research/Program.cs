@@ -10,12 +10,12 @@ namespace Stratification_Research
     {
         public static void Main()
         {
-            Researcher r1 = new Researcher(1);
-            Researcher r2 = new Researcher(2);
-            Researcher r3 = new Researcher(3);
-            Researcher r4 = new Researcher(4);
-            Researcher r5 = new Researcher(5);
-            Researcher r6 = new Researcher(6);
+            Researcher r1 = new Researcher(0, 1);
+            Researcher r2 = new Researcher(1, 2);
+            Researcher r3 = new Researcher(2, 3);
+            Researcher r4 = new Researcher(3, 4);
+            Researcher r5 = new Researcher(4, 5);
+            Researcher r6 = new Researcher(5, 6);
 
             List<Researcher> researchers = new List<Researcher>(){
                 r1, r2, r3, r4, r5, r6
@@ -31,12 +31,17 @@ namespace Stratification_Research
             MatchingResearcher[] matchingResearchers = researchers.ConvertAll<MatchingResearcher>(
                 r => new MatchingResearcher(r)).ToArray();
 
+            Console.WriteLine("1");
+
             Matching.MatchPreferences(matchingResearchers);
+
+            Console.WriteLine("2");
 
             foreach(MatchingResearcher r in matchingResearchers)
             {
                 Console.WriteLine(String.Format("{0} matched {1}",
-                    r.skillScore, r.preferences?[0].skillScore));
+                    r.skillScore, 
+                    r.preferences?.Count > 0 ? r.preferences[0].skillScore : "Nobody"));
             }
         }
     }

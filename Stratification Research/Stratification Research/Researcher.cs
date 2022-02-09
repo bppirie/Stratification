@@ -9,6 +9,7 @@ namespace Stratification_Research
     public class Researcher : EqualityComparer<Researcher>
     {
         #region Public Properties
+        public int id;
         public int skillScore;
         public HashSet<Researcher>? collaborators;
         #endregion
@@ -22,6 +23,11 @@ namespace Stratification_Research
         public Researcher(int score)
         {
             skillScore = score;
+        }
+        public Researcher(int id, int score)
+        {
+            this.id = id;
+            this.skillScore = score;
         }
         #endregion
 
@@ -71,8 +77,10 @@ namespace Stratification_Research
 
         public bool ProposeTo(MatchingResearcher r)
         {
+            Console.WriteLine(string.Format("{0} proposed to {1}", this.skillScore, r.skillScore));
             if (r == null) return false;
-            else if (r.hold == null || this.skillScore > r.hold.skillScore)
+            else if (r.preferences != null && r.preferences.Exists(x => x.skillScore == this.skillScore) 
+                && (r.hold == null || this.skillScore >= r.hold.skillScore))
             {
                 return true;
             }
