@@ -21,27 +21,26 @@ namespace Stratification_Research
                 r1, r2, r3, r4, r5, r6
             };
 
-            r1.collaborators = new HashSet<Researcher>() { r3, r4, r5, r6 };
-            r2.collaborators = new HashSet<Researcher>() { r1, r4, r5 };
-            r3.collaborators = new HashSet<Researcher>() { r2, r4, r5, r6 };
-            r4.collaborators = new HashSet<Researcher>() { r1, r2, r3, r5, r6 };
-            r5.collaborators = new HashSet<Researcher>() { r1, r2, r3, r6 };
-            r6.collaborators = new HashSet<Researcher>() { r1, r3, r4, r5 };
+            r1.collaborators = new HashSet<int>() { r3, r4, r5, r6 };
+            r2.collaborators = new HashSet<int>() { r1, r4, r5 };
+            r3.collaborators = new HashSet<int>() { r2, r4, r5, r6 };
+            r4.collaborators = new HashSet<int>() { r1, r2, r3, r5, r6 };
+            r5.collaborators = new HashSet<int>() { r1, r2, r3, r6 };
+            r6.collaborators = new HashSet<int>() { r1, r3, r4, r5 };
 
-            MatchingResearcher[] matchingResearchers = researchers.ConvertAll<MatchingResearcher>(
-                r => new MatchingResearcher(r)).ToArray();
+            Dictionary<int, MatchingResearcher> matchingResearchers = researchers.ToDictionary(
+                r => r.id,
+                r => new MatchingResearcher(r));
 
-            Console.WriteLine("1");
+            Matching match = new Matching(matchingResearchers);
 
-            Matching.MatchPreferences(matchingResearchers);
+            matchingResearchers = match.MatchPreferences();
 
-            Console.WriteLine("2");
-
-            foreach(MatchingResearcher r in matchingResearchers)
+            foreach((int id, MatchingResearcher r) in matchingResearchers)
             {
                 Console.WriteLine(String.Format("{0} matched {1}",
                     r.skillScore, 
-                    r.preferences?.Count > 0 ? r.preferences[0].skillScore : "Nobody"));
+                    r.preferences?.Count > 0 ? matchingResearchers[r.preferences[0]].skillScore : "Nobody"));
             }
         }
     }
