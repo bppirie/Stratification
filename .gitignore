@@ -1,7 +1,7 @@
-.suo
+*.suo
 
-.cache
+*.cache
 
-.exe
+*.exe
 
-.editorconfig
+*.editorconfig
